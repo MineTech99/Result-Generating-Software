@@ -1,0 +1,69 @@
+Result Generating Software - User Guide
+
+Project Structure
+-----------------
+Your project folder should look like this:
+
+Result_Generating_Software/
+│
+├── Input/
+│   ├── EXAMPLE_CSV.csv         # Your student data (CSV format)
+│   ├── Lexend-Regular.ttf      # Font file (required)
+│   ├── Lexend-ExtraBold.ttf    # Font file (required)
+│   └── (optional) background.png or background.jpg
+│
+├── Output/                     # Generated PNGs and PDF will appear here
+│
+├── config.txt                  # All user-editable settings (see below)
+├── main.py                     # Main script (do not edit)
+├── support.py                  # Helper functions (do not edit)
+├── Run_Me_Windows.bat          # Double-click to run on Windows
+├── Run_Me_MacOS.sh             # Double-click or run in Terminal on macOS
+└── Read ME.txt                 # This guide
+
+Features
+--------
+- Automatic ranking and sorting of students by marks.
+- Generates result sheets as PNG images and compiles them into a PDF.
+- Customizable headers and optional background image.
+- All layout, font, and table settings are pre-configured for best results.
+- Advanced users can further personalize via `config.txt`.
+
+First-Time Setup & Usage
+------------------------
+1. **Prepare Your Data:**
+   - Save your student list as a CSV file with columns: `Full Name`, `Marks`, `GR.No`.
+   - Place your CSV file in the `Input` folder.
+
+2. **Fonts:**
+   - Ensure `Lexend-Regular.ttf` and `Lexend-ExtraBold.ttf` are present in the `Input` folder.
+
+3. **(Optional) Background:**
+   - To use a custom background, add a PNG or JPG image to the `Input` folder.
+
+4. **Run the Program:**
+   - **Windows:** Double-click `Run_Me_Windows.bat`.
+   - **macOS:** 
+     - Open Terminal, navigate to the project folder.
+     - Run `chmod +x Run_Me_MacOS.sh` (only once).
+     - Double-click `Run_Me_MacOS.sh` or run `./Run_Me_MacOS.sh`.
+
+5. **Follow Prompts:**
+   - Enter your desired headers (e.g., Institute name, Branch) when asked.
+
+6. **Results:**
+   - Find your PNG images and the compiled PDF in the `Output` folder.
+
+Personalisation & Advanced Settings
+-----------------------------------
+- All settings (page size, fonts, table layout, etc.) are already set for optimal results.
+- To further customize, edit `config.txt` in the project root.
+- **Warning:** Only change values in `config.txt` if you understand them. Incorrect changes may break the output. Edit at your own risk!
+
+Troubleshooting
+---------------
+- Ensure your CSV and font files are in the `Input` folder.
+- If you add a background image, it must be PNG or JPG and match the configured page size.
+- If you encounter errors, check your data and restart the script.
+
+Enjoy your automated result generation!
